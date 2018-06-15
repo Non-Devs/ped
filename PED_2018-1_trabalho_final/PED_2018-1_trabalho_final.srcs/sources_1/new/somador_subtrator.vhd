@@ -55,7 +55,8 @@ begin
 
     -- somador/subtrator
     saida(0)    <=  num_A(0) xor num_aux(0) xor enabler;
-    aux0        <=  num_A(0) and num_aux(0);
+    aux0        <=  (num_A(0) and num_aux(0)) or (num_A(0) and enabler) 
+                        or (num_aux(0) and enabler);
 
     saida(1)    <=  num_A(1) xor num_aux(1) xor aux0;
     aux1        <=  (num_A(1) and num_aux(1)) or (num_A(1) and aux0) 

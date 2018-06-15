@@ -40,8 +40,8 @@ entity calcula is
 end calcula;
 
 architecture Behavioral of calcula is
-    signal s_soma, s_subtracao : STD_LOGIC_VECTOR(3 downto 0);
-    signal e_soma, e_subtracao : STD_LOGIC := '0';
+    signal s_soma, s_subtracao, s_soma_A_1 : STD_LOGIC_VECTOR(3 downto 0);
+    signal e_soma, e_subtracao, e_soma_A_1 : STD_LOGIC := '0';
 
     component somador_subtrator is
         Port ( enabler : in STD_LOGIC;
@@ -69,6 +69,14 @@ begin
                 cout => e_subtracao
     );
 
+    soma_A_1: somador_subtrator port map(
+                enabler => '0',
+                num_A => num_A,
+                num_B => "0001",
+                saida => s_soma_A_1,
+                cout => e_soma_A_1
+    );
+
     -- mux para determinar qual a operacao desejada
     process(operacao, num_A, num_B)
         begin
@@ -76,7 +84,7 @@ begin
 
             case operacao is
                 when "0000" => saida <= "0000";
-                when "1111" => saida <= "1111";
+                when "0001" => saida <= "1111";
                 when "0010" => saida <= num_A;
                 when "0011" => saida <= num_B;
                 when "0100" => saida <= num_A or num_B;
@@ -89,6 +97,9 @@ begin
                 when "1001" => 
                     saida <= s_subtracao;
                     erro <= e_subtracao;
+                when "1111" => 
+                    saida <= s_soma_A_1;
+                    erro <= e_soma_A_1;
                 when others => saida <= "1001";
             end case;
     end process;
