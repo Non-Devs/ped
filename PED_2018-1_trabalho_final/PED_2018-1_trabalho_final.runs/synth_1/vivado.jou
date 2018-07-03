@@ -1,12 +1,12 @@
 #-----------------------------------------------------------
 # Vivado v2016.3 (64-bit)
-# SW Build 1682563 on Mon Oct 10 19:07:26 MDT 2016
+# SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
 # IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
-# Start of session at: Fri Jun 15 00:37:57 2018
-# Process ID: 16188
-# Current directory: /home/phantoo/git/hub/ped/PED_2018-1_trabalho_final/PED_2018-1_trabalho_final.runs/synth_1
-# Command line: vivado -log calcula.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source calcula.tcl
-# Log file: /home/phantoo/git/hub/ped/PED_2018-1_trabalho_final/PED_2018-1_trabalho_final.runs/synth_1/calcula.vds
-# Journal file: /home/phantoo/git/hub/ped/PED_2018-1_trabalho_final/PED_2018-1_trabalho_final.runs/synth_1/vivado.jou
+# Start of session at: Tue Jul 03 18:41:16 2018
+# Process ID: 9932
+# Current directory: C:/Users/Diego/Documents/PortableGit/000-repositorios/ped/PED_2018-1_trabalho_final/PED_2018-1_trabalho_final.runs/synth_1
+# Command line: vivado.exe -log calcula.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source calcula.tcl
+# Log file: C:/Users/Diego/Documents/PortableGit/000-repositorios/ped/PED_2018-1_trabalho_final/PED_2018-1_trabalho_final.runs/synth_1/calcula.vds
+# Journal file: C:/Users/Diego/Documents/PortableGit/000-repositorios/ped/PED_2018-1_trabalho_final/PED_2018-1_trabalho_final.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source calcula.tcl -notrace

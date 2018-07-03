@@ -36,13 +36,13 @@ entity somador_subtrator is
         enabler : in STD_LOGIC;
         num_A, num_B : in STD_LOGIC_VECTOR(3 downto 0);
         saida : out STD_LOGIC_VECTOR(3 downto 0);
-        cout  : out STD_LOGIC
+        overflow  : out STD_LOGIC
     );
 end somador_subtrator;
 
 architecture Behavioral of somador_subtrator is
 
-    signal aux0, aux1, aux2 : STD_LOGIC := '0';
+    signal aux0, aux1, aux2, aux3 : STD_LOGIC := '0';
     signal num_aux : STD_LOGIC_VECTOR(3 downto 0);
 
 begin
@@ -67,7 +67,8 @@ begin
                         or (num_aux(2) and aux1);
 
     saida(3)    <=  num_A(3) xor num_aux(3) xor aux2;
-    cout        <=  (num_A(3) and num_aux(3)) or (num_A(3) and aux2) 
+    aux3        <=  (num_A(3) and num_aux(3)) or (num_A(3) and aux2) 
                         or (num_aux(3) and aux2);
+    overflow    <= aux2 xor aux3;
 
 end Behavioral;
