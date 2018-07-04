@@ -1,5 +1,5 @@
-project_ula.runs/
-project_ula.sim/
-project_ula.hw/
-project_ula.cache/
+*.runs/
+*.sim/
+*.hw/
+*.cache/
 .Xil/
