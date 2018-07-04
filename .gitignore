@@ -1,5 +1,5 @@
-*.runs/
-*.sim/
-*.hw/
-*.cache/
+**/*.runs/
+**/*.sim/
+**/*.hw/
+**/*.cache/
 .Xil/

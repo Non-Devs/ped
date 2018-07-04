@@ -108,14 +108,14 @@ begin
                         saida <= s_mult(3 downto 0);
                     end if;
                 when "1011" =>
-                    s_div <= std_logic_vector(to_signed(to_integer(signed(num_A) / signed(num_B)), 5));
+                    s_div <= std_logic_vector(to_unsigned(to_integer(unsigned(num_A) / unsigned(num_B)), 5));
                     if s_div > "01111" then
                         erro <= '1';
                     else 
                         saida <= s_div(3 downto 0);
                     end if;
                 when "1100" =>
-                    s_mod <= std_logic_vector(to_signed(to_integer(signed(num_A) / signed(num_B)), 5));
+                    s_mod <= std_logic_vector(to_unsigned(to_integer(unsigned(num_A) / unsigned(num_B)), 5));
                     if s_mod > "01111" then
                         erro <= '1';
                     else 
